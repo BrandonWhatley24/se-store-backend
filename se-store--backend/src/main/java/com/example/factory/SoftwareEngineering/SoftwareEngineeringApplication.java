@@ -62,14 +62,14 @@ public class SoftwareEngineeringApplication implements CommandLineRunner {
 				.firstName("Brandon")
 				.lastName("Whatley")
 				.username("brandon")
-				.password("whatley")
+				.password("1309331676")
 				.build();
 
 		User user2 = User.builder()
 				.firstName("andrew")
 				.lastName("mackey")
 				.username("andrew")
-				.password("mackey")
+				.password("-1081752912")
 				.build();
 
 		userRepository.save(user1);
