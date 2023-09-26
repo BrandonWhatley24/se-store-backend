@@ -1,5 +1,6 @@
 package com.example.factory.SoftwareEngineering.controller;
 
+import store.dao.*;
 import com.example.factory.SoftwareEngineering.entity.Order;
 import com.example.factory.SoftwareEngineering.entity.StoreItem;
 import com.example.factory.SoftwareEngineering.entity.User;
@@ -21,7 +22,7 @@ public class EmployeeController {
 
     @Autowired
     private orderRepository orderRepository;
-
+    CustomerDAO cdao = new CustomerDAO();
     @Autowired
     private UserRepository userRepository;
 
