@@ -22,7 +22,7 @@ public class EmployeeController {
 
     @Autowired
     private orderRepository orderRepository;
-    CustomerDAO cdao = new CustomerDAO();
+    
     @Autowired
     private UserRepository userRepository;
 
