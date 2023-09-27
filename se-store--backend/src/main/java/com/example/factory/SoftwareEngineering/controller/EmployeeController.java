@@ -1,5 +1,6 @@
 package com.example.factory.SoftwareEngineering.controller;
 
+import store.dao.*;
 import com.example.factory.SoftwareEngineering.entity.Order;
 import com.example.factory.SoftwareEngineering.entity.StoreItem;
 import com.example.factory.SoftwareEngineering.entity.Transaction;
@@ -26,7 +27,7 @@ public class EmployeeController {
 
     @Autowired
     private orderRepository orderRepository;
-
+    
     @Autowired
     private UserRepository userRepository;
 
