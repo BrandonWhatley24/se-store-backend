@@ -86,12 +86,12 @@ public class EmployeeController {
     }
 
     @PostMapping("/storeItem/Qty")
-    public int checkQty(@RequestBody int itemID){
+    public int checkQty(@RequestBody String itemID){
         return 5;
     }
 
     @PostMapping("/reorder/item")
-    public boolean reorderItem(@RequestBody int itemID){
+    public boolean reorderItem(@RequestBody String itemID){
         return true;
     }
     //Input obj = {'username': 'the username in question'}
