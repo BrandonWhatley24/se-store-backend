@@ -25,16 +25,14 @@ public class Order {
 	}
 	
 	// For creating a new order
-	public Order(int custID, int invID, int qty, boolean status, boolean pending, Date expectedDate) {
+	public Order(int custID, int invID, int qty, boolean status, boolean pending, int turnaround) {
 		this.custID = custID;
 		this.invID = invID;
 		this.qty = qty;
 		this.status = status;
 		this.pending = pending;
 		this.orderDate = new Date(System.currentTimeMillis());
-		
-		// FIGURE THIS OUT
-		this.expectedDate = expectedDate;
+		this.expectedDate = new Date(System.currentTimeMillis() + (turnaround * 86400000));
 	}
 
 	public int getOrderID() {

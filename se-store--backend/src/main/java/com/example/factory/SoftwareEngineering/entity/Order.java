@@ -27,6 +27,9 @@ public class Order {
     
     @Column(name = "purchase_date", nullable = false)
     private String purchaseDate;
+
+    @Column(name="item_result")
+    private double itemResult;
     
     @Column(name="item_price")
     private double itemPrice;

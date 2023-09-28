@@ -3,53 +3,63 @@ package store.dao;
 public class Customer {    
     
     private int custID;
+    private String custUsername;
+    private String custPass;
     private String custFName;
     private String custLName;
-    private String custPass;
     
-    public Customer(int custID, String custFName, String custLName, String custPass) {
+    public Customer(int custID, String custUsername, String custPass, String custFName, String custLName) {
         this.custID = custID;
+        this.custUsername = custUsername;
+        this.custPass = custPass;
         this.custFName = custFName;
         this.custLName = custLName;
-        this.custPass = custPass;
     }
 
-    public int getCustID() {
-        return custID;
-    }
+	public int getCustID() {
+		return custID;
+	}
 
-    public void setCustID(int custID) {
-        this.custID = custID;
-    }
+	public void setCustID(int custID) {
+		this.custID = custID;
+	}
 
-    public String getCustFName() {
-        return custFName;
-    }
+	public String getCustUsername() {
+		return custUsername;
+	}
 
-    public void setCustFName(String custFName) {
-        this.custFName = custFName;
-    }
+	public void setCustUsername(String custUsername) {
+		this.custUsername = custUsername;
+	}
 
-    public String getCustLName() {
-        return custLName;
-    }
+	public String getCustFName() {
+		return custFName;
+	}
 
-    public void setCustLName(String custLName) {
-        this.custLName = custLName;
-    }
+	public void setCustFName(String custFName) {
+		this.custFName = custFName;
+	}
 
-    public String getCustPass() {
-        return custPass;
-    }
+	public String getCustLName() {
+		return custLName;
+	}
 
-    public void setCustPass(String custPass) {
-        this.custPass = custPass;
-    }
+	public void setCustLName(String custLName) {
+		this.custLName = custLName;
+	}
 
-    @Override
-    public String toString() {
-        return "Customer [custID=" + custID + ", custFName=" + custFName + ", custLName=" + custLName + ", custPass="
-                + custPass + "]";
-    }
+	public String getCustPass() {
+		return custPass;
+	}
+
+	public void setCustPass(String custPass) {
+		this.custPass = custPass;
+	}
+
+	@Override
+	public String toString() {
+		return "Customer [custID=" + custID + ", custUsername=" + custUsername + ", custPass=" + custPass
+				+ ", custFName=" + custFName + ", custLName=" + custLName + "]";
+	}
 
 }
