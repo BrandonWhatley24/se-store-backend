@@ -23,4 +23,5 @@ public class Transaction {
     private String itemSpecs;
     private String Date;
     private String result;
+    private int qty;
 }

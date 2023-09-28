@@ -28,10 +28,13 @@ public class Order {
     @Column(name = "purchase_date", nullable = false)
     private String purchaseDate;
 
-    @Column(name="item_result")
-    private double itemResult;
+    @Column(name = "item_result")
+    private boolean itemResult;
     
-    @Column(name="item_price")
+    @Column(name = "item_price")
     private double itemPrice;
+
+    @Column(name = "item_qty")
+    private String qty;    
 
 }

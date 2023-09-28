@@ -179,8 +179,9 @@ public class EmployeeController {
         //  returnOrd.setItemCat(inv.get???());
         //  returnOrd.setItemSpecs(inv.get???());
             returnOrd.setPurchaseDate(date);
-            returnOrd.setItemResult(custID);
+            returnOrd.setItemResult(ord.getStatus());
             returnOrd.setItemPrice(inv.getSalePrice());
+            returnOrd.setQty(String.valueOf(ord.getQty()));
 
             returnOrder.add(returnOrd);
         }
@@ -200,8 +201,8 @@ public class EmployeeController {
         
         // Something here about connecting to other APIs to check things
         // So we can check turnaround time
-        boolean status = true;
-        int qty = 999; // temp
+        boolean status = Boolean.valueOf(transaction.getResult());
+        int qty = transaction.getQty();
         int turnaround = 5;
         if(qty * price > 500 || turnaround >= 7){
             status = false;

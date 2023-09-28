@@ -23,7 +23,7 @@ public class StoreItem {
     @Column(name = "item_cat")
     private String itemCat;
 
-    @Column(name = "item_specs")
+   @Column(name = "item_specs")
     private String itemSpecs;
     
     @Column(name="item_price")
