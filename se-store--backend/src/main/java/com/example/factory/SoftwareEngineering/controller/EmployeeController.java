@@ -79,13 +79,7 @@ public class EmployeeController {
         returnUser.setUsername(cust.getCustUsername());
         returnUser.setFirstName(cust.getCustFName());
         returnUser.setLastName(cust.getCustLName());
-
-        /*
-        returnUser.setUserId(1);
-        returnUser.setUsername("brandon");
-        returnUser.setFirstName("Brandon");
-        returnUser.setLastName("Whatley");
-        */
+        returnUser.setBalance(cust.getCustBalance());
 
         return returnUser;
     }
@@ -96,10 +90,9 @@ public class EmployeeController {
     @PostMapping("user/balance")
     public double checkBalance(@RequestBody String username){
         
-        //Call the DAO
+        Customer cust = cdao.getItem(username);
         
-
-        return 500;
+        return Double.parseDouble(cust.getCustBalance());
     }
     
 
@@ -133,18 +126,22 @@ public class EmployeeController {
     }
 
     @PostMapping("/storeItem/Qty")
-    public int checkQty(@RequestBody int itemID){
+    public int checkQty(@RequestBody String itemID){
+
+        int newitemID = Integer.parseInt(itemID);
         
-        Inventory item = idao.getItem(itemID);
+        Inventory item = idao.getItem(newitemID);
         int qty = item.getQtyOnHand();
 
         return qty;
     }
 
     @PostMapping("/reorder/item")
-    public boolean reorderItem(@RequestBody int itemID){
+    public boolean reorderItem(@RequestBody String itemID){
+
+        int newitemID = Integer.parseInt(itemID);
         
-        Inventory inv = idao.getItem(itemID);
+        Inventory inv = idao.getItem(newitemID);
         int qty = inv.getQtyOnHand();
         
         // Something something contact Factory API

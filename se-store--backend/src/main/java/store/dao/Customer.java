@@ -7,13 +7,15 @@ public class Customer {
     private String custPass;
     private String custFName;
     private String custLName;
+	private String custBalance;
     
-    public Customer(int custID, String custUsername, String custPass, String custFName, String custLName) {
+    public Customer(int custID, String custUsername, String custPass, String custFName, String custLName, String custBalance) {
         this.custID = custID;
         this.custUsername = custUsername;
         this.custPass = custPass;
         this.custFName = custFName;
         this.custLName = custLName;
+		this.custBalance = custBalance;
     }
 
 	public int getCustID() {
@@ -54,6 +56,14 @@ public class Customer {
 
 	public void setCustPass(String custPass) {
 		this.custPass = custPass;
+	}
+
+	public String getCustBalance() {
+		return custBalance;
+	}
+
+	public void setCustBalance(String custBalance) {
+		this.custBalance = custBalance;
 	}
 
 	@Override

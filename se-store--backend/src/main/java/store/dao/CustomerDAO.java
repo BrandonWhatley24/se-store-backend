@@ -51,7 +51,7 @@ public class CustomerDAO implements DataAccess<Customer>{
             ResultSet rs = pstmt.executeQuery();             
             
             while(rs.next()){
-                Customer cust = new Customer(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5));
+                Customer cust = new Customer(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6));
                 list.add(cust);
             }
             
@@ -80,7 +80,7 @@ public class CustomerDAO implements DataAccess<Customer>{
             ResultSet rs = pstmt.executeQuery();
 
             while(rs.next()){
-            	cust = new Customer(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5));
+            	cust = new Customer(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6));
             }
             
             con.close();
@@ -108,7 +108,7 @@ public class CustomerDAO implements DataAccess<Customer>{
             ResultSet rs = pstmt.executeQuery();
 
             while(rs.next()){
-            	cust = new Customer(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5));
+            	cust = new Customer(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6));
             }
             
             con.close();
@@ -123,7 +123,7 @@ public class CustomerDAO implements DataAccess<Customer>{
     // Returns a Customer object given a username and password
     public Customer checkPassword(String username, String password) {
         
-        Customer cust = new Customer(-1, "", "", "", "");
+        Customer cust = new Customer(-1, "", "", "", "", "");
         
         try{
             Class.forName(driver);            
@@ -136,7 +136,7 @@ public class CustomerDAO implements DataAccess<Customer>{
             ResultSet rs = pstmt.executeQuery();
 
             while(rs.next()){
-            	cust = new Customer(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5));
+            	cust = new Customer(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6));
             }
             
             con.close();
