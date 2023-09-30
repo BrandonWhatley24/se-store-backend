@@ -222,6 +222,12 @@ public class EmployeeController {
         store.dao.Order order = new store.dao.Order(custID, invID, qty, status, pending, turnaround);
         odao.insert(order);
 
+        //Make a call to the bank
+
+
+
+        idao.updateQtyOnHand(invID, inv.getQtyOnHand() - qty);
+
         return status;
     }
 
